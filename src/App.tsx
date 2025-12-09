@@ -1,6 +1,10 @@
+import Faq from "./components/Faq/Faq"
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Faq />
+    </div>
   )
 }
 
