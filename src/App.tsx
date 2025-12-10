@@ -1,9 +1,10 @@
-import Faq from "./components/Faq/Faq"
+import FileUploader from "./components/file-uploader/FileUploader"
 
 const App = () => {
   return (
-    <div>
-      <Faq />
+    <div className="w-full flex justify-center items-center">
+      {/* <Faq /> */}
+      <FileUploader />
     </div>
   )
 }
