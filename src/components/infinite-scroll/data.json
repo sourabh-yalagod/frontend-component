@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "How to Improve Your Focus",
+    "description": "Practical techniques to stay focused and avoid distractions in a busy world."
+  },
+  {
+    "id": 2,
+    "title": "The Future of Web Development",
+    "description": "A look at upcoming trends in JavaScript frameworks, AI tools, and modern UI design."
+  },
+  {
+    "id": 3,
+    "title": "10 Healthy Habits for Developers",
+    "description": "Simple lifestyle changes that improve productivity, posture, and mental well-being."
+  },
+  {
+    "id": 4,
+    "title": "Building Scalable APIs",
+    "description": "Key strategies and patterns for designing API architectures that handle large traffic."
+  },
+  {
+    "id": 5,
+    "title": "Mastering Git & GitHub",
+    "description": "A quick guide to branching, pull requests, and best practices for collaboration."
+  },
+  {
+    "id": 6,
+    "title": "Understanding Cloud Deployment",
+    "description": "An introduction to AWS, serverless computing, and containerized applications."
+  },
+  {
+    "id": 7,
+    "title": "Beginner’s Guide to UI/UX",
+    "description": "Learn the basics of clean layouts, typography, and user-centered design."
+  },
+  {
+    "id": 8,
+    "title": "How AI is Changing Coding",
+    "description": "Exploring how AI tools assist developers with debugging, generation, and optimization."
+  },
+  {
+    "id": 9,
+    "title": "Write Faster, Cleaner JavaScript",
+    "description": "Tips, patterns, and tricks to improve your JavaScript code quality and performance."
+  },
+  {
+    "id": 10,
+    "title": "Top VS Code Extensions",
+    "description": "A curated list of must-have extensions for speed, productivity, and debugging."
+  },
+  {
+    "id": 11,
+    "title": "React Performance Optimization",
+    "description": "Methods to reduce re-renders and improve overall app efficiency."
+  },
+  {
+    "id": 12,
+    "title": "Building Accessible Websites",
+    "description": "How to create web apps that are inclusive and usable for everyone."
+  },
+  {
+    "id": 13,
+    "title": "State Management Simplified",
+    "description": "Understanding Redux, Zustand, Recoil, and other state tools."
+  },
+  {
+    "id": 14,
+    "title": "Understanding Async JavaScript",
+    "description": "A clear explanation of callbacks, promises, and async/await."
+  },
+  {
+    "id": 15,
+    "title": "Why TypeScript Matters",
+    "description": "The benefits of type safety, interfaces, and clean architecture."
+  },
+  {
+    "id": 16,
+    "title": "Building REST APIs with Node.js",
+    "description": "Step-by-step approach to designing and structuring robust backend APIs."
+  },
+  {
+    "id": 17,
+    "title": "How to Grow as a Developer",
+    "description": "Guidelines for continuous learning, building real projects, and improving skills."
+  },
+  {
+    "id": 18,
+    "title": "Making Your Portfolio Stand Out",
+    "description": "Essential tips to create an impressive and professional developer portfolio."
+  },
+  {
+    "id": 19,
+    "title": "Understanding Databases",
+    "description": "A beginner-friendly explanation of SQL, NoSQL, indexing, and data modeling."
+  },
+  {
+    "id": 20,
+    "title": "The Power of Open Source",
+    "description": "Why contributing to open-source helps your career and skill development."
+  },
+  {
+    "id": 21,
+    "title": "Introduction to DevOps",
+    "description": "Learn CI/CD, automation, monitoring, and better deployment workflows."
+  },
+  {
+    "id": 22,
+    "title": "Designing Clean API Responses",
+    "description": "Best practices for structuring payloads, errors, and versioning."
+  },
+  {
+    "id": 23,
+    "title": "Understanding CSS Layouts",
+    "description": "Master flexbox, grid, responsive design, and modular CSS patterns."
+  },
+  {
+    "id": 24,
+    "title": "Getting Started with Docker",
+    "description": "Containerization basics to streamline development and deployment."
+  },
+  {
+    "id": 25,
+    "title": "How to Think in React",
+    "description": "Breaking down UI into components, props, and reusable patterns."
+  },
+  {
+    "id": 26,
+    "title": "Debugging Like a Pro",
+    "description": "Techniques to quickly identify and resolve issues in codebases."
+  },
+  {
+    "id": 27,
+    "title": "Understanding Authentication",
+    "description": "A guide to JWT, OAuth, sessions, and secure login flows."
+  },
+  {
+    "id": 28,
+    "title": "How to Learn Anything Faster",
+    "description": "Proven learning techniques backed by psychology and practice."
+  },
+  {
+    "id": 29,
+    "title": "API Security Best Practices",
+    "description": "Tips to protect your backend from attacks, leaks, and vulnerabilities."
+  },
+  {
+    "id": 30,
+    "title": "Roadmap to Becoming a Full-Stack Developer",
+    "description": "Everything you need to learn from frontend to backend to deployment."
+  }
+]
