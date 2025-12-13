@@ -1,11 +1,12 @@
-import InfiniteScroll from "./components/infinite-scroll/InfiniteScroll"
+import DragAndDrop from "./components/drag-drop/DragAndDrop"
 
 const App = () => {
   return (
     <div className="w-full flex justify-center items-center">
       {/* <Faq /> */}
       {/* <FileUploader /> */}
-      <InfiniteScroll />
+      {/* <InfiniteScroll /> */}
+      <DragAndDrop />
     </div>
   )
 }
