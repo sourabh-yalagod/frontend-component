@@ -1,116 +1,114 @@
-import { useEffect, useRef, useState } from "react";
-import rowData from "./data.json";
+import { useCallback, useEffect, useRef, useState } from "react"
+import rowData from './data.json'
 import type { Data } from "./type";
 
 const Select = () => {
-    const [index, setIndex] = useState(0);
-    const [open, setOpen] = useState(false);
+    const [data, setData] = useState<Data[]>(rowData);
+    const [search, setSeach] = useState<string>("");
+    const [open, setOpen] = useState<boolean>(false)
     const [selected, setSelected] = useState<Data | null>(null);
-    const [search, setSearch] = useState("");
-    const selectRef = useRef<HTMLDivElement | null>(null);
-    const optionRefs = useRef<(HTMLLIElement | null)[]>([]);
-
-    const filtered = rowData.filter((item) =>
-        item.label.toLowerCase().includes(search.toLowerCase())
-    );
-
-    // Reset index when filtered list changes
+    const optionsRef = useRef<(HTMLLIElement | null)[]>([]);
+    const selectComponentRef = useRef<HTMLLIElement | null>(null);
+    const [index, setIndex] = useState(0)
     useEffect(() => {
-        setIndex(0);
-    }, [search]);
+        if (!search) {
+            setData(rowData);
+            return;
+        }
+        setData((prev: Data[]) => {
+            if (!prev) return data;
+            return rowData?.filter((item: Data) => item.value.toLowerCase().startsWith(search.toLowerCase()))
+        })
+    }, [search])
+    const handleSelectOption = (item: Data) => {
+        setOpen(false);
+        setSelected(item);
+        setSeach(item.label);
+    }
 
-    // Scroll active option into view
-    useEffect(() => {
-        optionRefs.current[index]?.scrollIntoView({ block: "center", behavior: "smooth" });
-    }, [index]);
-
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (!open || filtered.length === 0) return;
-
-        switch (e.key) {
-            case "ArrowDown":
-                e.preventDefault();
-                setIndex((prev) => (prev + 1) % filtered.length);
+    const handlekeyMoves = (e: KeyboardEvent) => {
+        if (!open) return;
+        switch (e.code?.toLowerCase()) {
+            case "arrowdown":
+                setIndex(prev => {
+                    return ++prev % data.length
+                })
                 break;
-
-            case "ArrowUp":
-                e.preventDefault();
-                setIndex((prev) =>
-                    prev === 0 ? filtered.length - 1 : prev - 1
-                );
+            case "arrowup":
+                setIndex(prev => {
+                    return prev == 0 ? data.length - 1 : --prev
+                })
                 break;
-
-            case "Enter":
-                e.preventDefault();
-                const item = filtered[index];
-                if (item) {
-                    setSelected(item);
-                    setSearch(item.label);
-                    setOpen(false);
-                }
-                break;
-
-            case "Escape":
+            case "enter":
+                const item: Data = data[index]
+                setSeach(item.label)
+                setSelected(item)
                 setOpen(false);
                 break;
         }
-    };
-    const detectOutSideClick = (e: MouseEvent) => {
-        if (!selectRef.current?.contains(e.target as Node)) setOpen(false);
     }
     useEffect(() => {
-        window.addEventListener("mousedown", detectOutSideClick);
+        window.addEventListener("keydown", handlekeyMoves);
+        window.addEventListener("mousedown", (e) => handleOutSideClick(e));
+        optionsRef.current[index]?.scrollIntoView({ behavior: "smooth", block: "center" })
+        return () => window.removeEventListener("keydown", handlekeyMoves)
+    }, [index, open]);
 
-        return () => {
-            window.removeEventListener("mousedown", detectOutSideClick);
-        };
-    }, []);
+    const handleOutSideClick = useCallback((e: any) => {
+        if (!selectComponentRef.current?.contains(e.target as Node)) setOpen(false)
+    }, [open])
     return (
-        <div ref={selectRef} className="relative w-full max-w-sm">
+        <div ref={() => { selectComponentRef }} className="relative w-64">
             <input
+                type="text"
                 value={search}
                 onChange={(e) => {
-                    setSearch(e.target.value);
-                    setOpen(true);
+                    setOpen(true)
+                    setSeach(e.target.value)
                 }}
                 onFocus={() => setOpen(true)}
-                onKeyDown={handleKeyDown}
-                className="w-full rounded-xl border px-4 py-2.5"
-                placeholder="Select topic"
-                aria-expanded={open}
-                aria-autocomplete="list"
+                placeholder="Search..."
+                className="
+            w-full px-3 py-2 
+            border rounded-md 
+            outline-none
+            bg-white text-gray-900
+            border-gray-300
+            focus:ring-2 focus:ring-blue-500
+        "
             />
 
-            {open && (
-                <ul
-                    role="listbox"
-                    className="absolute z-10 mt-2 max-h-48 w-full overflow-auto rounded-xl border bg-white shadow-lg"
-                >
-                    {filtered.map((item, idx) => (
-                        <li
-                            key={item.id}
-                            ref={(el) => {
-                                optionRefs.current[idx] = el;
-                            }}
-                            tabIndex={-1}
-                            role="option"
-                            aria-selected={idx === index}
-                            onClick={() => {
-                                setSelected(item);
-                                setSearch(item.label);
-                                setOpen(false);
-                            }}
-                            className={`cursor-pointer px-4 py-2 transition
-                ${idx === index ? "bg-blue-100" : "hover:bg-gray-100"}
-              `}
-                        >
-                            {item.label}
-                        </li>
-                    ))}
-                </ul>
-            )}
+            {open && <ul
+                className="
+            absolute mt-1 w-full
+            max-h-48 overflow-y-auto
+            rounded-md border
+            bg-white shadow-md
+            border-gray-200
+        "
+            >
+                {data?.map((item: Data, idx: number) => (
+                    <li
+                        onClick={() => handleSelectOption(item)}
+                        key={item.id}
+                        ref={(el) => {
+                            optionsRef.current[idx] = el
+                        }}
+                        role="option"
+                        className={`
+                    cursor-pointer px-3 py-2
+                    text-sm text-gray-700
+                    hover:bg-blue-50 hover:text-blue-600
+                    ${index == idx && "bg-slate-500"}
+                `}
+                    >
+                        {item.label}
+                    </li>
+                ))}
+            </ul>}
         </div>
-    );
-};
 
-export default Select;
+    )
+}
+
+export default Select
