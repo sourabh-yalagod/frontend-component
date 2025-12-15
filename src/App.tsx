@@ -1,4 +1,4 @@
-import DragAndDrop from "./components/drag-drop/DragAndDrop"
+import Select from "./components/select/Select"
 
 const App = () => {
   return (
@@ -6,7 +6,8 @@ const App = () => {
       {/* <Faq /> */}
       {/* <FileUploader /> */}
       {/* <InfiniteScroll /> */}
-      <DragAndDrop />
+      {/* <DragAndDrop /> */}
+      <Select />
     </div>
   )
 }

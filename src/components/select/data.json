@@ -1,0 +1,22 @@
+[
+  { "id": 1, "value": "variables", "label": "Variables" },
+  { "id": 2, "value": "loops", "label": "Loops" },
+  { "id": 3, "value": "functions", "label": "Functions" },
+  { "id": 4, "value": "arrays", "label": "Arrays" },
+  { "id": 5, "value": "objects", "label": "Objects" },
+  { "id": 6, "value": "conditionals", "label": "Conditionals" },
+  { "id": 7, "value": "recursion", "label": "Recursion" },
+  { "id": 8, "value": "classes", "label": "Classes" },
+  { "id": 9, "value": "inheritance", "label": "Inheritance" },
+  { "id": 10, "value": "polymorphism", "label": "Polymorphism" },
+  { "id": 11, "value": "data-structures", "label": "Data Structures" },
+  { "id": 12, "value": "algorithms", "label": "Algorithms" },
+  { "id": 13, "value": "time-complexity", "label": "Time Complexity" },
+  { "id": 14, "value": "space-complexity", "label": "Space Complexity" },
+  { "id": 15, "value": "debugging", "label": "Debugging" },
+  { "id": 16, "value": "error-handling", "label": "Error Handling" },
+  { "id": 17, "value": "asynchronous", "label": "Asynchronous Programming" },
+  { "id": 18, "value": "memory-management", "label": "Memory Management" },
+  { "id": 19, "value": "version-control", "label": "Version Control (Git)" },
+  { "id": 20, "value": "testing", "label": "Testing" }
+]
