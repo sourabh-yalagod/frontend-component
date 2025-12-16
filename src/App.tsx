@@ -1,4 +1,5 @@
-import Select from "./components/select/Select"
+import data from "./components/file-explore/data"
+import FileExplore from "./components/file-explore/FileExplore"
 
 const App = () => {
   return (
@@ -7,7 +8,8 @@ const App = () => {
       {/* <FileUploader /> */}
       {/* <InfiniteScroll /> */}
       {/* <DragAndDrop /> */}
-      <Select />
+      {/* <Select /> */}
+      <FileExplore key={Math.random()} node={data[1]} />
     </div>
   )
 }
