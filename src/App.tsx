@@ -1,5 +1,5 @@
-import data from "./components/file-explore/data"
-import FileExplore from "./components/file-explore/FileExplore"
+import OtpComponent from "./components/otp/OtpComponent"
+
 
 const App = () => {
   return (
@@ -9,7 +9,8 @@ const App = () => {
       {/* <InfiniteScroll /> */}
       {/* <DragAndDrop /> */}
       {/* <Select /> */}
-      <FileExplore key={Math.random()} node={data[1]} />
+      {/* <FileExplore key={Math.random()} node={data[1]} /> */}
+      <OtpComponent />
     </div>
   )
 }
