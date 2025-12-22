@@ -1,4 +1,4 @@
-import OtpComponent from "./components/otp/OtpComponent"
+import VertualList from "./components/vertual-list/VertualList"
 
 
 const App = () => {
@@ -10,7 +10,8 @@ const App = () => {
       {/* <DragAndDrop /> */}
       {/* <Select /> */}
       {/* <FileExplore key={Math.random()} node={data[1]} /> */}
-      <OtpComponent />
+      {/* <OtpComponent /> */}
+      <VertualList />
     </div>
   )
 }
