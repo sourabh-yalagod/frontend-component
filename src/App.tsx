@@ -1,5 +1,4 @@
-import VertualList from "./components/vertual-list/VertualList"
-
+import MultiForm from "./components/multiple-form/MultiForm"
 
 const App = () => {
   return (
@@ -11,7 +10,8 @@ const App = () => {
       {/* <Select /> */}
       {/* <FileExplore key={Math.random()} node={data[1]} /> */}
       {/* <OtpComponent /> */}
-      <VertualList />
+      {/* <VertualList /> */}
+      <MultiForm />
     </div>
   )
 }
