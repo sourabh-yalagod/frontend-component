@@ -1,4 +1,5 @@
 import MultiForm from "./components/multiple-form/MultiForm"
+import Page from "./components/state-management/Page"
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       {/* <FileExplore key={Math.random()} node={data[1]} /> */}
       {/* <OtpComponent /> */}
       {/* <VertualList /> */}
-      <MultiForm />
+      {/* <MultiForm /> */}
+      <Page />
     </div>
   )
 }
