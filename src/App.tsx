@@ -1,5 +1,6 @@
 import MultiForm from "./components/multiple-form/MultiForm"
 import Page from "./components/state-management/Page"
+import CustomToast from "./components/toast/CustomToast"
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       {/* <OtpComponent /> */}
       {/* <VertualList /> */}
       {/* <MultiForm /> */}
-      <Page />
+      {/* <Page /> */}
+      <CustomToast />
     </div>
   )
 }
