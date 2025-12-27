@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Amit Sharma",
+    "email": "amit.sharma@gmail.com",
+    "phone": "9876543210",
+    "role": "Admin",
+    "status": "Active",
+    "city": "Bengaluru",
+    "age": 28
+  },
+  {
+    "id": 2,
+    "name": "Priya Verma",
+    "email": "priya.verma@gmail.com",
+    "phone": "9123456780",
+    "role": "User",
+    "status": "Inactive",
+    "city": "Mumbai",
+    "age": 25
+  },
+  {
+    "id": 3,
+    "name": "Rahul Mehta",
+    "email": "rahul.mehta@gmail.com",
+    "phone": "9988776655",
+    "role": "Manager",
+    "status": "Active",
+    "city": "Delhi",
+    "age": 32
+  },
+  {
+    "id": 4,
+    "name": "Sneha Kulkarni",
+    "email": "sneha.k@gmail.com",
+    "phone": "9090909090",
+    "role": "User",
+    "status": "Active",
+    "city": "Pune",
+    "age": 24
+  },
+  {
+    "id": 5,
+    "name": "Vikas Rao",
+    "email": "vikas.rao@gmail.com",
+    "phone": "9345678123",
+    "role": "Support",
+    "status": "Blocked",
+    "city": "Hyderabad",
+    "age": 29
+  }
+]
